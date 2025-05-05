@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20 основных команд Git</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .command {
+	    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-left: 4px solid #3498db;
+            padding: 10px 15px;
+            margin: 10px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        code {
+            background-color: #e8e8e8;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        .description {
+            margin-top: 5px;
+            color: #555;
+        }
+        .section {
+            margin-top: 30px;
+        }
+        .section-title {
+            color: #2980b9;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>20 основных команд Git</h1>
+    
+    <div class="section">
+        <div class="section-title">Настройка Git</div>
+        
+        <div class="command">
+            <code>git config --global user.name "Ваше Имя"</code>
+            <div class="description">Установка имени пользователя</div>
+        </div>
+        
+        <div class="command">
+            <code>git config --global user.email "ваш@email.com"</code>
+            <div class="description">Установка email пользователя</div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <div class="section-title">Создание репозитория</div>
+        
+        <div class="command">
+            <code>git init</code>
+            <div class="description">Инициализация нового репозитория</div>
+        </div>
+        
+        <div class="command">
+            <code>git clone URL_репозитория</code>
+            <div class="description">Клонирование существующего репозитория</div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <div class="section-title">Основные операции</div>
+        
+        <div class="command">
+            <code>git status</code>
+            <div class="description">Просмотр состояния файлов</div>
+        </div>
+        
+        <div class="command">
+            <code>git add имя_файла</code>
+            <div class="description">Добавление файла в индекс</div>
+        </div>
+        
+        <div class="command">
+            <code>git add .</code>
+            <div class="description">Добавление всех изменённых файлов</div>
+        </div>
+        
+        <div class="command">
+            <code>git commit -m "Сообщение коммита"</code>
+            <div class="description">Создание коммита</div>
+        </div>
+        
+        <div class="command">
+            <code>git log</code>
+            <div class="description">Просмотр истории коммитов</div>
+        </div>
+        
+        <div class="command">
+            <code>git diff</code>
+            <div class="description">Просмотр изменений до коммита</div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <div class="section-title">Работа с ветками</div>
+        
+        <div class="command">
+            <code>git branch</code>
+            <div class="description">Просмотр списка веток</div>
+        </div>
+        
+        <div class="command">
+            <code>git branch имя_ветки</code>
+            <div class="description">Создание новой ветки</div>
+        </div>
+        
+        <div class="command">
+            <code>git checkout имя_ветки</code>
+            <div class="description">Переключение на ветку</div>
+        </div>
+        
+        <div class="command">
+            <code>git merge имя_ветки</code>
+            <div class="description">Слияние веток</div>
+        </div>
+        
+        <div class="command">
+            <code>git branch -d имя_ветки</code>
+            <div class="description">Удаление ветки</div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <div class="section-title">Работа с удалённым репозиторием</div>
+        
+        <div class="command">
+            <code>git remote add origin URL_репозитория</code>
+            <div class="description">Добавление удалённого репозитория</div>
+        </div>
+        
+        <div class="command">
+            <code>git push -u origin имя_ветки</code>
+            <div class="description">Отправка изменений на сервер</div>
+        </div>
+        
+        <div class="command">
+            <code>git pull</code>
+            <div class="description">Получение изменений с сервера</div>
+        </div>
+        
+        <div class="command">
+            <code>git fetch</code>
+            <div class="description">Получение изменений без слияния</div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <div class="section-title">Отмена изменений</div>
+        
+        <div class="command">
+            <code>git reset --hard HEAD</code>
+            <div class="description">Отмена всех локальных изменений</div>
+        </div>
+        
+        <div class="command">
+            <code>git checkout -- имя_файла</code>
+            <div class="description">Отмена изменений в файле</div>
+        </div>
+    </div>
+</body>
+</html>
