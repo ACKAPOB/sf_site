@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20 основных команд Vim</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .command {
+	    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-left: 4px solid #27ae60;
+            padding: 12px 15px;
+            margin: 10px 0;
+            border-radius: 0 4px 4px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        code {
+            background-color: #e8e8e8;
+            padding: 3px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #c7254e;
+        }
+        .description {
+            margin-top: 8px;
+            color: #555;
+        }
+        .section {
+            margin-top: 30px;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .section-title {
+            color: #2980b9;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 1px dashed #3498db;
+        }
+        .mode {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.8em;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>20 основных команд Vim</h1>
+    
+    <div class="section">
+        <div class="section-title">Основы навигации</div>
+        
+        <div class="command">
+            <span class="mode">NORMAL</span>
+            <code>h j k l</code>
+            <div class="description">Движение: влево, вниз, вверх, вправо</div>
+        </div>
+        
+        <div class="command">
+            <span class="mode">NORMAL</span>
+            <code>0</code>
+            <div class="description">Переход в начало строки</div>
+        </div>
+        
+        <div class="command">
+            <span class="mode">NORMAL</span>
+            <code>$</code>
+            <div class="description">Переход в конец строки</div>
+        </div>
+        
+        <div class="command">
+            <span class="mode">NORMAL</span>
+            <code>gg</code>
+            <div class="description">Переход в начало файла</div>
+        </div>
+        
+        <div class="command">
+            <span class="mode">NORMAL</span>
+            <code>G</code>
+            <div class="description">Переход в конец файла</div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <div class="section-title">Редактирование</div>
+        
+        <div class="command">
+            <span class="mode">NORMAL</span>
+            <code>i</code>
+            <div class="description">Вход в режим вставки (insert mode)</div>
+        </div>
+        
+        <div class="command">
+            <span class="mode">NORMAL</span>
+            <code>a</code>
+            <div class="description">Вход в режим вставки после курсора</div>
+        </div>
+        
+        <div class="command">
+            <span class="mode">NORMAL</span>
+            <code>o</code>
+            <div class="description">Вставка новой строки ниже и вход в режим вставки</div>
+        </div>
+        
+        <div class="command">
+            <span class="mode">NORMAL</span>
+            <code>O</code>
+            <div class="description">Вставка новой строки выше и вход в режим вставки</div>
+        </div>
+        
+        <div class="command">
+            <span class="mode">NORMAL</span>
+            <code>u</code>
+            <div class="description">Отмена последнего действия (undo)</div>
+        </div>
+        
+        <div class="command">
+            <span class="mode">NORMAL</span>
+            <code>Ctrl + r</code>
+            <div class="description">Повтор последнего действия (redo)</div>
+        </div>
+        
+        <div class="command">
+            <span class="mode">NORMAL</span>
+            <code>dd</code>
+            <div class="description">Удалить текущую строку</div>
+        </div>
+        
+        <div class="command">
+            <span class="mode">NORMAL</span>
+            <code>yy</code>
+            <div class="description">Копировать текущую строку</div>
+        </div>
+        
+        <div class="command">
+            <span class="mode">NORMAL</span>
+            <code>p</code>
+            <div class="description">Вставить после курсора</div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <div class="section-title">Поиск и замена</div>
+        
+        <div class="command">
+            <span class="mode">NORMAL</span>
+            <code>/pattern</code>
+            <div class="description">Поиск вперёд по шаблону</div>
+        </div>
+        
+        <div class="command">
+            <span class="mode">NORMAL</span>
+            <code>?pattern</code>
+            <div class="description">Поиск назад по шаблону</div>
+        </div>
+        
+        <div class="command">
+            <span class="mode">NORMAL</span>
+            <code>:%s/old/new/g</code>
+            <div class="description">Заменить все вхождения "old" на "new" во всём файле</div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <div class="section-title">Работа с файлами</div>
+        
+        <div class="command">
+            <span class="mode">NORMAL</span>
+            <code>:w</code>
+            <div class="description">Сохранить файл</div>
+        </div>
+        
+        <div class="command">
+            <span class="mode">NORMAL</span>
+            <code>:q</code>
+            <div class="description">Выйти из Vim</div>
+        </div>
+        
+        <div class="command">
+            <span class="mode">NORMAL</span>
+            <code>:wq</code>
+            <div class="description">Сохранить и выйти</div>
+        </div>
+        
+        <div class="command">
+            <span class="mode">NORMAL</span>
+            <code>:q!</code>
+            <div class="description">Выйти без сохранения</div>
+        </div>
+    </div>
+</body>
+</html>
